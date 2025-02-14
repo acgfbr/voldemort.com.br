@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export const AnimatedBackground = () => {
   return (
@@ -10,9 +11,8 @@ export const AnimatedBackground = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.9 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-0 z-0 bg-[url('/voldemort.jpg')] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundBlendMode: 'normal',
           transform: 'translateY(-15%) scale(0.7)',
           maxWidth: '900px',
           height: '600px',
@@ -22,8 +22,18 @@ export const AnimatedBackground = () => {
           top: '5%',
           boxShadow: '0 0 50px rgba(34, 197, 94, 0.3)',
           borderRadius: '10px',
+          overflow: 'hidden',
         }}
-      />
+      >
+        <Image
+          src="/voldemort.jpg"
+          alt="Lord Voldemort"
+          fill
+          priority
+          className="object-cover"
+          sizes="(max-width: 900px) 100vw, 900px"
+        />
+      </motion.div>
 
       {/* Dark overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/60 to-black/90 z-10" />
