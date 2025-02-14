@@ -8,7 +8,7 @@ export const FloatingSkulls = () => {
 
   useEffect(() => {
     setSkulls(
-      Array.from({ length: 40 }, () => ({
+      Array.from({ length: 240 }, () => ({
         x: Math.random() * 100,
         duration: Math.random() * 8 + 8
       }))

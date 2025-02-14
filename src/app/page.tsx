@@ -1,27 +1,14 @@
-'use server';
-
 import { FloatingSkulls } from './components/FloatingSkulls';
 import { RandomMessage } from './components/RandomMessage';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import { AnimatedTitle } from './components/AnimatedTitle';
 import { AnimatedContainer } from './components/AnimatedContainer';
-import { getVisitCount } from './actions';
+import { Counter } from './components/Counter';
 
-// Componente para o contador
-const Counter = async () => {
-  const visitCount = await getVisitCount();
+export const runtime = 'edge';
+export const preferredRegion = 'auto';
+export const dynamic = 'force-dynamic';
 
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <div className="text-6xl font-bold text-green-500" style={{ textShadow: '0 0 10px rgba(34, 197, 94, 0.6)' }}>
-        {visitCount?.toLocaleString() ?? '...'}
-      </div>
-      <div className="text-sm text-green-400">Total de Vítimas</div>
-    </div>
-  );
-};
-
-// Componente principal agora é async
 export default async function Home() {
   return (
     <div className="min-h-screen bg-black text-green-500 flex flex-col items-center justify-center p-4 relative overflow-hidden">
