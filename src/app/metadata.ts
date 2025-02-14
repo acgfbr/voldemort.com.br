@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Testemunhe o poder d'Aquele-Que-Não-Deve-Ser-Nomeado",
     images: [
       {
-        url: '/voldemort.jpg',
+        url: '/rindo.webp',
         width: 1200,
         height: 630,
         alt: 'Lord Voldemort',
@@ -20,6 +20,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Contador de Mortes do Lord Voldemort",
     description: "Testemunhe o poder d'Aquele-Que-Não-Deve-Ser-Nomeado",
-    images: ['/voldemort.jpg'],
+    images: ['/rindo.webp'],
   },
 }; 
