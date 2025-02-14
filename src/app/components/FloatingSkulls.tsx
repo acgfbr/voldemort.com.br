@@ -8,9 +8,9 @@ export const FloatingSkulls = () => {
 
   useEffect(() => {
     setSkulls(
-      Array.from({ length: 10 }, () => ({
+      Array.from({ length: 40 }, () => ({
         x: Math.random() * 100,
-        duration: Math.random() * 10 + 20
+        duration: Math.random() * 8 + 8
       }))
     );
   }, []);
@@ -24,14 +24,20 @@ export const FloatingSkulls = () => {
           animate={{
             y: "-20vh",
             x: `${skull.x}vw`,
-            rotate: [0, 360],
+            rotate: [0, 180, 360],
+            scale: [0.8, 1.1, 0.8],
           }}
           transition={{
             duration: skull.duration,
             repeat: Infinity,
             ease: "linear",
+            scale: {
+              duration: skull.duration / 3,
+              repeat: Infinity,
+              repeatType: "reverse"
+            }
           }}
-          className="absolute text-4xl opacity-20"
+          className="absolute text-3xl opacity-20"
         >
           💀
         </motion.div>

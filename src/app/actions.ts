@@ -9,29 +9,15 @@ const supabase = createClient(
 
 export async function getVisitCount() {
   try {
-    const { data: currentData, error: fetchError } = await supabase
-      .from('visits')
-      .select('count')
-      .single();
-
-    if (fetchError && fetchError.code !== 'PGRST116') {
-      console.error('Error fetching count:', fetchError);
+    // Use a more atomic update approach with SQL
+    const { data, error } = await supabase.rpc('increment_visits');
+    
+    if (error) {
+      console.error('Error incrementing visits:', error);
       return null;
     }
 
-    const currentCount = currentData?.count || 0;
-    const newCount = currentCount + 1;
-
-    const { error: updateError } = await supabase
-      .from('visits')
-      .upsert({ id: 1, count: newCount });
-
-    if (updateError) {
-      console.error('Error updating count:', updateError);
-      return null;
-    }
-
-    return newCount;
+    return data;
   } catch (error) {
     console.error('Error:', error);
     return null;
