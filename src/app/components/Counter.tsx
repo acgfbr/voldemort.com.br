@@ -42,24 +42,27 @@ export const Counter = () => {
     <div className="flex flex-col items-center justify-center gap-4">
       <div className="relative pointer-events-none">
         {/* Outer glow container */}
-        <div className="absolute inset-0 blur-[60px] bg-green-400/20 rounded-full" />
+        <div className="absolute inset-0 blur-[30px] md:blur-[60px] bg-green-400/20 rounded-full" />
         
         <motion.div 
-          className="text-6xl font-bold text-green-300 min-h-[5rem] flex items-center relative tracking-wider"
+          className="text-4xl md:text-6xl font-bold text-green-300 min-h-[4rem] md:min-h-[5rem] flex items-center relative tracking-wider"
           animate={{
             textShadow: [
+              '0 0 7px rgba(74, 222, 128, 1), 0 0 10px rgba(74, 222, 128, 0.9), 0 0 21px rgba(74, 222, 128, 0.7)',
               '0 0 7px rgba(74, 222, 128, 1), 0 0 10px rgba(74, 222, 128, 0.9), 0 0 21px rgba(74, 222, 128, 0.7), 0 0 42px rgba(74, 222, 128, 0.6)',
-              '0 0 7px rgba(74, 222, 128, 1), 0 0 10px rgba(74, 222, 128, 0.9), 0 0 21px rgba(74, 222, 128, 0.7), 0 0 42px rgba(74, 222, 128, 0.6), 0 0 82px rgba(74, 222, 128, 0.4)',
-              '0 0 7px rgba(74, 222, 128, 1), 0 0 10px rgba(74, 222, 128, 0.9), 0 0 21px rgba(74, 222, 128, 0.7), 0 0 42px rgba(74, 222, 128, 0.6)',
+              '0 0 7px rgba(74, 222, 128, 1), 0 0 10px rgba(74, 222, 128, 0.9), 0 0 21px rgba(74, 222, 128, 0.7)',
             ]
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "linear"
           }}
           style={{
-            WebkitTextStroke: '1px rgba(74, 222, 128, 0.2)'
+            WebkitTextStroke: '1px rgba(74, 222, 128, 0.2)',
+            transform: 'translate3d(0,0,0)', // Force GPU acceleration
+            backfaceVisibility: 'hidden',
+            WebkitFontSmoothing: 'antialiased',
           }}
         >
           {isLoading ? (
@@ -68,7 +71,11 @@ export const Counter = () => {
             <div className="relative py-4">
               {/* Background blur effect */}
               <div 
-                className="absolute inset-0 blur-[3px] z-0 opacity-90"
+                className="absolute inset-0 blur-[2px] md:blur-[3px] z-0 opacity-90"
+                style={{
+                  transform: 'translate3d(0,0,0)', // Force GPU acceleration
+                  backfaceVisibility: 'hidden'
+                }}
               >
                 {visitCount?.toLocaleString() ?? '...'}
               </div>
@@ -80,14 +87,18 @@ export const Counter = () => {
               
               {/* Subtle flicker effect */}
               <motion.div
-                className="absolute inset-0 z-20 mix-blend-soft-light"
+                className="absolute inset-0 z-20 mix-blend-soft-light opacity-0 md:opacity-100"
                 animate={{
-                  opacity: [0, 0.4, 0],
+                  opacity: [0, 0.3, 0],
                 }}
                 transition={{
-                  duration: 0.1,
+                  duration: 0.2,
                   repeat: Infinity,
-                  repeatDelay: Math.random() * 8 + 5,
+                  repeatDelay: Math.random() * 6 + 4,
+                }}
+                style={{
+                  transform: 'translate3d(0,0,0)', // Force GPU acceleration
+                  backfaceVisibility: 'hidden'
                 }}
               >
                 {visitCount?.toLocaleString() ?? '...'}
