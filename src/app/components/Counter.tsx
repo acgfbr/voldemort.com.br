@@ -24,18 +24,6 @@ export const Counter = () => {
     // Initial fetch
     fetchCount();
 
-    // Update only when the tab becomes visible again
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        fetchCount();
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
   }, []);
 
   return (
