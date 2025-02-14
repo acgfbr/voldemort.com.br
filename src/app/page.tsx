@@ -15,7 +15,7 @@ export default async function Home() {
       <FloatingSkulls />
       <AnimatedBackground />
 
-      <div className="text-center z-20 mt-[35vh] md:mt-[45vh] relative">
+      <div className="text-center z-20 mt-[25vh] md:mt-[35vh] relative">
         <AnimatedTitle />
         
         <AnimatedContainer>

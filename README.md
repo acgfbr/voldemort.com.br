@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💀 Contador de Mortes do Lord Voldemort
 
-## Getting Started
+_"Aquele-Que-Não-Deve-Ser-Nomeado está contando suas vítimas..."_
 
-First, run the development server:
+![Avada Kedavra](public/rindo.webp)
+
+## 🧙‍♂️ O Que é Isso?
+
+Um contador sombrio que registra as visitas ao site como "vítimas" do Lord Voldemort. Cada visitante é mais uma alma para a coleção do Lorde das Trevas!
+
+## ⚡ Tecnologias Mágicas Utilizadas
+
+- **Next.js 15** - _Porque até Você-Sabe-Quem precisa de performance_
+- **Framer Motion** - _Para aquelas animações mais suaves que uma Maldição Imperdoável_
+- **Tailwind CSS** - _Estilização mais rápida que um Nimbus 2000_
+- **TypeScript** - _Porque tipagem forte é como um bom Protego_
+- **Supabase** - _Banco de dados mais seguro que Gringotes_
+- **Edge Runtime** - _Mais rápido que um Avada Kedavra_
+
+## 🪄 Funcionalidades Sombrias
+
+- **Contador Neon** - _Com efeito de brilho digno de uma Lumos Maxima_
+- **Caveiras Flutuantes** - _Mais assustadoras que um Dementador_
+- **Mensagens Aleatórias** - _Mais imprevisíveis que as profecias da Sibila_
+- **Design Responsivo** - _Se adapta melhor que um Metamorfomago_
+- **Animações Suaves** - _Mais fluidas que uma Poção Polissuco_
+
+## 🧪 Como Rodar Localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone o repositório (se você tiver coragem)
+git clone https://github.com/acgfbr/voldemort.com.br.git
+
+# Entre na câmara dos códigos
+cd voldemort.com.br
+
+# Instale as dependências (como preparar uma poção)
+pnpm install
+
+# Configure as variáveis de ambiente (como um feitiço)
+cp .env.example .env.local
+
+# Rode o projeto (e reze para não ser a próxima vítima)
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗡️ Variáveis de Ambiente Necessárias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+NEXT_PUBLIC_SUPABASE_URL=sua_url_do_supabase
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_do_supabase
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🐍 Contribuindo
 
-## Learn More
+Sinta-se livre para contribuir com este projeto! Toda ajuda é bem-vinda, mesmo que você seja da Sonserina.
 
-To learn more about Next.js, take a look at the following resources:
+1. Faça um Fork
+2. Crie sua Feature Branch (`git checkout -b feature/AvadaKedavra`)
+3. Commit suas mudanças (`git commit -m 'Adicionando mais terror'`)
+4. Push para a Branch (`git push origin feature/AvanadaKedavra`)
+5. Abra um Pull Request
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+_"A última visita será contada assim como a primeira..."_
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido com 🖤 e muita magia negra.
