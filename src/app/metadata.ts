@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://voldemort.com.br'),
   title: "Contador de Mortes do Lord Voldemort | Real Oficial: 60 Créditos Grátis",
   description: "O Lorde das Trevas matou o Harry Potter de novo e te deu 60 créditos grátis no Real Oficial. Coincidência? Acho que não. Transforme seus vídeos em cortes virais com o poder das trevas.",
   keywords: ["Voldemort", "Contador de Mortes", "Harry Potter", "Lorde das Trevas", "Real Oficial", "Cortes Virais", "60 Créditos Grátis", "IA"],
