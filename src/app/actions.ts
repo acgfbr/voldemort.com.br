@@ -1,25 +1,15 @@
 'use server';
 
-import { createClient } from '@supabase/supabase-js';
+import { kv } from '@vercel/kv';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+const COUNTER_KEY = 'voldemort:kill_count';
 
 export async function getVisitCount() {
   try {
-    // Use a more atomic update approach with SQL
-    const { data, error } = await supabase.rpc('increment_visits');
-    
-    if (error) {
-      console.error('Error incrementing visits:', error);
-      return null;
-    }
-
-    return data;
+    const count = await kv.incr(COUNTER_KEY);
+    return count;
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error incrementing visits:', error);
     return null;
   }
 } 

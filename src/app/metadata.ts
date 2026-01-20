@@ -1,25 +1,25 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contador de Mortes do Lord Voldemort | Aquele-Que-Não-Deve-Ser-Nomeado",
-  description: "Junte-se ao lado das trevas e testemunhe o poder d'Aquele-Que-Não-Deve-Ser-Nomeado. Veja o contador de mortes aumentar a cada visitante. Trouxas, cuidado!",
-  keywords: ["Voldemort", "Contador de Mortes", "Harry Potter", "Lorde das Trevas", "Avada Kedavra", "Magia", "Mundo Bruxo"],
+  title: "Contador de Mortes do Lord Voldemort | Real Oficial: 60 Créditos Grátis",
+  description: "O Lorde das Trevas matou o Harry Potter de novo e te deu 60 créditos grátis no Real Oficial. Coincidência? Acho que não. Transforme seus vídeos em cortes virais com o poder das trevas.",
+  keywords: ["Voldemort", "Contador de Mortes", "Harry Potter", "Lorde das Trevas", "Real Oficial", "Cortes Virais", "60 Créditos Grátis", "IA"],
   openGraph: {
-    title: "Contador de Mortes do Lord Voldemort",
-    description: "Testemunhe o poder d'Aquele-Que-Não-Deve-Ser-Nomeado",
+    title: "Real Oficial: 60 Créditos Grátis | Presente do Lorde das Trevas",
+    description: "Voldemort matou o Potter e sobrou um presente pra você: 60 créditos grátis pra fazer cortes virais. Você ganhou o poder das trevas.",
     images: [
       {
-        url: '/rindo.webp',
+        url: '/og-image.jpeg',
         width: 1200,
         height: 630,
-        alt: 'Lord Voldemort',
+        alt: 'Real Oficial - 60 Créditos Grátis - Você ganhou o poder das trevas',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Contador de Mortes do Lord Voldemort",
-    description: "Testemunhe o poder d'Aquele-Que-Não-Deve-Ser-Nomeado",
-    images: ['/rindo.webp'],
+    title: "Real Oficial: 60 Créditos Grátis | Presente do Lorde das Trevas",
+    description: "Voldemort matou o Potter e sobrou um presente pra você: 60 créditos grátis pra fazer cortes virais.",
+    images: ['/og-image.jpeg'],
   },
 }; 

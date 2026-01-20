@@ -5,6 +5,7 @@ import { AnimatedTitle } from "./components/AnimatedTitle";
 import { AnimatedContainer } from "./components/AnimatedContainer";
 import { Counter } from "./components/Counter";
 import { DumbledoreQuote } from "./components/DumbledoreQuote";
+import { PromoBanner } from "./components/PromoBanner";
 import { Analytics } from "@vercel/analytics/react";
 
 export const runtime = "edge";
@@ -34,6 +35,8 @@ export default async function Home() {
         </div>
 
         <DumbledoreQuote />
+
+        <PromoBanner />
       </div>
     </div>
   );
