@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Voldemort matou o Potter e sobrou um presente pra você: 60 créditos grátis pra fazer cortes virais. Você ganhou o poder das trevas.",
     images: [
       {
-        url: '/og-image.jpeg',
+        url: 'https://cdn.realoficial.com.br/og-image-voldemort.jpg',
         width: 1200,
         height: 630,
         alt: 'Real Oficial - 60 Créditos Grátis - Você ganhou o poder das trevas',
@@ -21,6 +21,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Real Oficial: 60 Créditos Grátis | Presente do Lorde das Trevas",
     description: "Voldemort matou o Potter e sobrou um presente pra você: 60 créditos grátis pra fazer cortes virais.",
-    images: ['/og-image.jpeg'],
+    images: ['https://cdn.realoficial.com.br/og-image-voldemort.jpg'],
   },
 }; 
